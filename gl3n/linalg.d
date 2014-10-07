@@ -578,7 +578,7 @@ struct Vector(type, int dimension_) {
         assert(almost_equal(v4.normalized, vec4(1.0f/sqrt(84.0f), 3.0f/sqrt(84.0f), 5.0f/sqrt(84.0f), 7.0f/sqrt(84.0f))));
     }
 
-    const int opCmp(ref const Vector vec) const {
+    const int opCmp(ref const Vector vec) {
         foreach(i, a; vector) {
             if(a < vec.vector[i]) {
                 return -1;
